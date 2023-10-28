@@ -1,0 +1,130 @@
+.header {
+    margin-top: 70px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.btn {
+    border: none;
+}
+
+.nav__button {
+    display: none;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav__link {
+    @include link
+}
+
+.header__button {
+    @include button
+}
+
+.header__info {
+    display: none;
+}
+
+.menu {
+    display: none;
+    background-color: white;
+    font-size: 40px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.exit {
+    display: none;
+    background-color: white;
+    font-size: 40px;
+}
+
+@media only screen and (max-width:794px) {
+    .nav__list {
+        display: none;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu__exit {
+        display: none;
+    }
+
+    .exit__menu {
+        display: block;
+    }
+
+    .nav__blok {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 500px;
+        background-color: darkcyan;
+        border-radius: 8px;
+        top: 120px;
+        right: 20px;
+        animation: navblok 1s ease;
+    }
+
+    @keyframes navblok {
+        
+        from {
+            transform: translateX(80%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(20px);
+            opacity: 1;
+        }
+    }
+
+    .nav__blok > li {
+        padding: 20px 0px;
+        text-align: center;
+        transform: translateY(50px);
+    }
+
+    .nav__blok > li > a {
+        margin-left: -33px;
+        font-size: 20px;
+        color: #fff;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+@media only screen and (max-width:420px) {
+    .header__button {
+        display: none;
+    }
+
+    .nav__button {
+        right: 40px;
+        display: block;
+        width: 50%;
+        transform: translateY(80px);
+        @include button
+    }
+}

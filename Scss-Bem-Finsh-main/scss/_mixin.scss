@@ -1,0 +1,29 @@
+@mixin link {
+    color: #3D3D3F;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin button {
+    border: none;
+    padding: 12px 24px;
+    color: #FFF;
+    font-family: "Barlow";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 5px;
+    opacity: 0.85;
+    background: rgba(243, 95, 47, 0.75);
+
+    &:hover {
+        background: #fff;
+        color: rgba(243, 95, 47, 0.75);
+        border: 2px solid rgba(243, 95, 47, 0.75);
+        transition: all 0.5s ease-out;
+    }
+}
